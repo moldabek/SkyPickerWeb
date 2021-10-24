@@ -5,8 +5,8 @@ MetaData = sa.MetaData()
 
 Ticket = sa.Table(
     'ticket', MetaData,
-    sa.Column('booking_token', sa.String(length=1000)),
-    sa.Column('price', sa.Integer()),
+    sa.Column('booking_token', sa.String(length=1000), nullable=True),
+    sa.Column('price', sa.Integer(), nullable=True),
     sa.Column('date', sa.Date()),
     sa.Column('fly_from', sa.String(length=9)),
     sa.Column('fly_to', sa.String(length=9)),

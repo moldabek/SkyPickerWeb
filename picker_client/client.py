@@ -86,9 +86,9 @@ class SkyPickerClient:
             ) as response:
                 result = await response.json()
             resp_object = SkyPickerResponseObject(
-                price=result.get('data')[0].get('price') if result.get('data') != [] else 0,
+                price=result.get('data')[0].get('price') if result.get('data') != [] and result is not None else 0,
                 booking_token=result.get('data')[0].get('booking_token') if result.get(
-                    'data') != [] else "Doesn't exist",
+                    'data') != [] and result is not None else "Doesn't exist",
                 date=date_to,
                 fly_to=fly_to,
                 fly_from=fly_from

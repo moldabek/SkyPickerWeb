@@ -20,6 +20,7 @@ skypicker_client = get_skypicker_client()
 
 async def initialize():
     await run_database_client(settings.DATABASE_URL)
+    await skypicker_client.set_data_to_db()
     await start_http_server()
 
 
