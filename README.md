@@ -1,11 +1,11 @@
 # Тестовое задание от Aviata & Chocotravel
 
-1. Создать базу данных и юзера с привелегией над базой
+1. Создать базу данных и юзера с привилегией над базой
 2. Создать `.env` как на примере([.env_example](https://github.com/moldabek/SkyPickerWeb/blob/main/.env_example))
-3. Следущем шагом создать образ и запустить
-   1. `docker build -t <name_of_image> .`
-   2. `docker run -d --network host --name <name_of_runner> <name_of_image>`
-   3. `docker logs -f <name_of_runner>`
+3. Следующим шагом создать образ и запустить
+   1. `docker build -t <tag_name> .`
+   2. `docker run -d --network host --name <name_of_container> <tag_name>`
+   3. `docker logs -f <name_of_container>`
 # Endpoint-ы для взаимодейтсвие с данными в базе
 1. `<HOST>:<PORT>/get_tickets/` - отображение билетов и их данных в json формате
 >Метод запроса: GET
